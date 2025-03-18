@@ -20,7 +20,9 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "electron-updater": "^6.3.9"
+    "electron-updater": "^6.3.9",
+    "react95": "^4.0.0",
+    "styled-components": "^6.1.16"
   },
   "devDependencies": {
     "@playwright/test": "^1.48.2",

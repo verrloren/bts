@@ -1,37 +1,21 @@
-import { useState } from 'react'
-import UpdateElectron from '@/components/update'
-import logoVite from './assets/logo-vite.svg'
-import logoElectron from './assets/logo-electron.svg'
-import './App.css'
+import { LandmarkComponent } from "@/features/landmarks"
+import { InfoComponent } from "./features/info";
+import { TimeStampsComponent } from "./features/timestamps";
+
 
 function App() {
-  const [count, setCount] = useState(0)
   return (
-    <div className='App'>
-      <div className='logo-box'>
-        <a href='https://github.com/electron-vite/electron-vite-react' target='_blank'>
-          <img src={logoVite} className='logo vite' alt='Electron + Vite logo' />
-          <img src={logoElectron} className='logo electron' alt='Electron + Vite logo' />
-        </a>
-      </div>
-      <h1>Electron + Vite + React</h1>
-      <div className='card'>
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className='read-the-docs'>
-        Click on the Electron + Vite logo to learn more
-      </p>
-      <div className='flex-center'>
-        Place static files into the<code>/public</code> folder <img style={{ width: '5em' }} src='./node.svg' alt='Node logo' />
-      </div>
+		<main className="relative flex w-full min-h-screen gap-8 px-8 pt-8">
 
-      <UpdateElectron />
-    </div>
+				<div className="w-1/3">
+					<LandmarkComponent />
+				</div>
+
+				<div className="flex flex-col items-center justify-center w-2/3 gap-8">
+					<TimeStampsComponent />
+					<InfoComponent />
+				</div>
+		</main>
   )
 }
 
